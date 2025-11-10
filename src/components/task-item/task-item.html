@@ -1,0 +1,5 @@
+<li [class.done]="task.done">
+  <input type="checkbox" [checked]="task.done" (change)="toggleDone()" />
+  <span>{{ task.description }}</span>
+  <button (click)="deleteTask()">X</button>
+</li>

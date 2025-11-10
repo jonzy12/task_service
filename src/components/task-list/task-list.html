@@ -1,0 +1,16 @@
+<h3>רשימת משימות</h3>
+<ul>
+  <app-task-item
+    *ngFor="let task of tasks; let i = index"
+    [task]="task"
+    [index]="i"
+    (remove)="onRemoveTask($event)"
+    (toggle)="onToggleDone($event)">
+  </app-task-item>
+</ul>
+
+<hr>
+
+<h3>הוסף משימה חדשה</h3>
+<input [(ngModel)]="newTask" placeholder="הכנס משימה" />
+<button (click)="addTask()">הוסף</button>
